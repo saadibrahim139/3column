@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*  variable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* font */
+    --Lexend-Deca: 'Lexend Deca', sans-serif;
+    --cursive: 'Big Shoulders Display';
+    /* color */
+    /* first-sec */
+    --Bright-orange: hsl(31, 77%, 52%);
+    /* second-sec */
+    --Dark-cyan: hsl(184, 100%, 22%);
+    /* thrid-sec */
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /*    ### Neutral */
+    /* (paragraphs) */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* layout */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.container {
+    overflow: hidden;
+    border-radius: 8px;
+    max-width: 350px;
+}
+
+main .container>div {
+    padding: 50px 20px;
+}
+
+.section>* {
+    padding: 20px;
+}
+
+.section h1 {
+    font-family: var(--cursive);
+    font-size: 40px;
+    color: var(--Very-light-gray);
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.section p {
+    color: var(--Transparent-white);
+    font-family: var(--Lexend-Deca);
+    line-height: 30px;
+    padding-top: 0;
+}
+
+.section button {
+    border: 0px;
+    border-radius: 50px;
+    width: 150px;
+    margin-left: 20px;
+    background-color: var(--Very-light-gray);
+    font-family: var(--Lexend-Deca);
+    cursor: pointer;
+}
+
+.section button:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+/* first-section */
+.first-section {
+    background-color: var(--Bright-orange);
+}
+
+.first-section button {
+    color: var(--Bright-orange);
+}
+
+/* second-section */
+.second-section {
+    background-color: var(--Dark-cyan);
+}
+
+.second-section button {
+    color: var(--Dark-cyan);
+}
+
+/* third-section */
+.third-section {
+    background-color: var(--Very-dark-cyan);
+}
+
+.third-section button {
+    color: var(--Very-dark-cyan);
+}
+
+.attribution {
+    display: none;
+}
+
+/* media query */
+@media (min-width: 750px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        max-width: 800px;
+        display: flex;
+        height: 500px;
+        position: relative;
+    }
+
+    .container p {
+        line-height: 25px;
+    }
+
+    .container button {
+        position: absolute;
+        bottom: 40px;
+    }
+
+    .attribution {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+    }
+}
